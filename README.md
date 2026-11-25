@@ -13,7 +13,7 @@ category tag, per the original flow sketch.
 
 ## Running it locally
 
-You'll need Python 3.10+ and Node 18+.
+You'll need Python 3.11+ and Node.js 22.12+.
 
 ### 1. Backend
 
@@ -30,15 +30,15 @@ The API will be live at `http://localhost:8000`. Interactive docs at `http://loc
 In a second terminal:
 
 ```bash
-cd frontend
-npm install
-npm run dev
+cd frontend1
+npm ci
+npm run dev -- --host localhost --port 5173 --strictPort
 ```
 
 Open the printed local URL (usually `http://localhost:5173`).
 
 By default the frontend talks to `http://localhost:8000`. To point it elsewhere, create a
-`frontend/.env` file:
+`frontend1/.env` file:
 
 ```
 VITE_API_URL=http://your-backend-host:8000
